@@ -1,0 +1,23 @@
+<ul class="list-group list-group-horizontal ">
+    <li (click)="onBrandClick(null)" class="list-group-item">All</li>
+    @for (item of list; track $index) {
+        <li (click)="onBrandClick(item.id)" class="list-group-item">{{ item.name }}</li>
+        }   
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<p (click)="onBrandClick(null)">All</p>
+@for (item of list; track $index) {
+<p (click)="onBrandClick(item.id)">{{ item.name }}</p>
+}
+-->

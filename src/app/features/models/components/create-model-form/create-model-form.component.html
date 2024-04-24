@@ -1,0 +1,27 @@
+
+<form [formGroup]="form" (Submit)="onFormSubmit()">
+    <!-- Name Input -->
+    BrandId: <input type="text" formControlName="brandId" />
+    <div *ngIf="form.get('brandId')?.errors && form.get('brandId')?.touched " >
+      {{ form.get('brandId')?.errors| appValidationErrors }}
+    </div>
+    Name: <input type="text" formControlName="name" />
+    <div *ngIf="form.get('name')?.errors && form.get('name')?.touched "  >
+      {{ form.get('name')?.errors| appValidationErrors }}
+    </div>
+    ModelYear: <input type="text" formControlName="modelYear" />
+    <div *ngIf="form.get('modelYear')?.errors && form.get('modelYear')?.touched " >
+      {{ form.get('modelYear')?.errors| appValidationErrors }}
+    </div>
+    imageUrl: <input type="text" formControlName="imageUrl" />
+    <div *ngIf="form.get('imageUrl')?.errors && form.get('imageUrl')?.touched " >
+      {{ form.get('imageUrl')?.errors| appValidationErrors }}
+    </div>
+    DailyPrice: <input type="text" formControlName="dailyPrice" />
+    <div *ngIf="form.get('dailyPrice')?.errors && form.get('dailyPrice')?.touched " >
+      {{ form.get('dailyPrice')?.errors| appValidationErrors }}
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>
+

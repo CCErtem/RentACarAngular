@@ -1,0 +1,25 @@
+<ul>
+  <li *ngFor="let item of list; let i = index" routerLink="/home/models/{{item.id}}">
+    {{ item.name }}
+  </li>
+</ul>
+
+
+<!-- >= Angular 17 -->
+<!-- @for (item of list; track $index) {
+<p>{{ item.name }} {{ $index }}</p>
+} -->
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" [class.disabled]="currentPage == 1">
+      <a class="page-link" (click)="previousPage()">Previous</a>
+    </li>
+    <li class="page-item" *ngFor="let page of pages" [class.active]="page == currentPage">
+      <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage == pages.length">
+      <a class="page-link" (click)="nextPage()">Next</a>
+    </li>
+  </ul>
+</nav>

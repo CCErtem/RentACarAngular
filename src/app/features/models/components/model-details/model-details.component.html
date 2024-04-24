@@ -1,0 +1,14 @@
+<div class="container">
+<img src="{{modelDetails.imageUrl}}" class="card-img-top" alt="...">
+
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Brand: {{modelDetails.brand.name | uppercase }}</li>
+    <li class="list-group-item">Model: {{modelDetails.name | lowercase}}</li>
+    <li class="list-group-item">Year: {{modelDetails.modelYear }}</li>
+    <li class="list-group-item">Price:{{ modelDetails.dailyPrice | vatAdd : 10 | currency : "₺" }}</li>
+    
+<!-- <p>{{ modelDetails.dailyPrice | number }}</p> -->
+<!-- <p>{{ dateNow | date }}</p> -->
+
+  </ul>
+</div>

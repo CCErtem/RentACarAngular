@@ -1,0 +1,17 @@
+<div class="container">
+    <ul class="list-group list-group-flush ">
+        <hr>
+    @for (item of list; track $index) {
+        <li  class="list-group-item">Rental ID: {{ item.id}} </li> 
+        <li  class="list-group-item">Customer:  {{ item.customer.firstName }}  {{ item.customer.lastName }}</li> 
+        <li  class="list-group-item">Car:  {{ item.car.model.brand.name }} - {{ item.car.model.name }}  </li> 
+        <li  class="list-group-item">Model Year:  {{ item.car.model.modelYear }} </li> 
+        <li  class="list-group-item">Plate: {{ item.car.plate }}  </li> 
+        <li  class="list-group-item">Daily Price: {{ item.car.model.dailyPrice}} </li> 
+        <li  class="list-group-item">Rental Date: {{ item.rentalDate }} </li> 
+        <li  class="list-group-item">Return Date: {{ item.returnDate }} </li> 
+
+
+        }   
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <ul class="list-group list-group-flush ">
+        <hr>
+    @for (item of list; track $index) {
+        <li  class="list-group-item">Full Name: {{ item.firstName }} {{ item.lastName }} 
+        <br>
+        Email: {{ item.email }}
+        </li>
+        <li  class="list-group-item"></li>
+        }   
+  </ul>
+</div>
